@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <!-- updated version -->
+        <LinearLayout
+            android:id="@+id/smallLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <!--                ^^^^^^^   -->
+
+            <ImageView
+                android:id="@+id/smallLayoutIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_xml"/>
+
+        </LinearLayout>
+
+        <!-- expanded layout, aka where you can press button to send image(SOON/)-->
+        <!--TODO - complete the button for text and image translator.-->
+        <!--TODO - for now, currently using placeholders-->
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="250dp"
+            android:layout_height="190dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:orientation="vertical"
+            android:padding="7dp"
+            android:visibility="visible">
+            <!--                ^^^^^^^   -->
+            <!--        can change to "gone" to preview icon-->
+            <!--        can change to "visible" to preview display-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                android:text="FloatTranslate"
+                android:textColor="#e8e8e8"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/buttonClose"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/close_window" />
+
+            <ImageView
+                android:id="@+id/buttonMinimize"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/minimize_window" />
+
+            <LinearLayout
+                android:id="@+id/layoutPageExpanded"
+                android:layout_width="235dp"
+                android:layout_height="155dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="?attr/colorPrimary"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <!--enter text to translate-->
+
+                    <Spinner
+                        android:id="@+id/lang1spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="-24dp"
+                        android:background="@drawable/widget_spinner"
+                        android:textColor="#e8e8e8"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/inputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:ems="10"
+                        android:hint="Enter text"
+                        android:inputType="text"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:orientation="vertical">
+
+                    <!--result text, wip-->
+                    <!--TODO -  make this dynamic, and add a reverser -->
+
+                    <Spinner
+                        android:id="@+id/lang2spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="-24dp"
+                        android:background="@drawable/widget_spinner"
+                        android:text="English"
+                        android:textColor="#e8e8e8"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/outputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:ems="10"
+                        android:hint=""
+                        android:inputType="text"
+                        android:paddingStart="10dp" />
+
+                    <ImageView
+                        android:id="@+id/translatedCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/copy_icon" />
+
+                    <Button
+                        android:id="@+id/translateButton"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="-27dp"
+                        android:background="@drawable/layout_outliner"
+                        android:text="Translate"
+                        android:textColor="#FFFFFF"
+                        android:textAllCaps="false"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+</FrameLayout>
