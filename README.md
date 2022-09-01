@@ -1,4 +1,4 @@
-# Window-Translator-
+# Window-Translator
 Simple overlay-style translator app for android. Supported from Android 6 (Marshmallow) to Latest.
 **Overlay permission is required for the app to function!**
 
