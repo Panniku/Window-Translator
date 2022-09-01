@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <RelativeLayout
+            android:id="@+id/layoutContainer"
+            android:layout_width="220dp"
+            android:layout_height="140dp"
+            android:background="@color/black"
+            android:backgroundTint="#B32C2C2C"
+            >
+
+        <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Window Translator"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                />
+
+        <ImageView
+                android:id="@+id/closeLayout"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/close_window"
+                />
+
+        <ImageView
+                android:id="@+id/minimizeLayout"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_toStartOf="@+id/closeLayout"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/minimize_window"
+                />
+
+        <!-- MAIN LAYOUT -->
+        <RelativeLayout
+                android:id="@+id/mainView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="visible"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    >
+
+                <!-- LANG 1 HOLDER -->
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/black_shadow"
+                        >
+
+                    <RelativeLayout
+                            android:id="@+id/windowLang1MainContent"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            >
+
+                        <RelativeLayout
+                                android:id="@+id/windowLang1Holder"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                >
+
+                            <Spinner
+                                    android:id="@+id/windowLang1Spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/white"
+                                    android:layout_centerVertical="true"
+                                    android:background="@color/black_shadow"
+                                    />
+                        </RelativeLayout>
+
+
+                        <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/windowLang1Holder"
+                                android:scrollbars="vertical"
+                                >
+
+                            <EditText
+                                    android:id="@+id/toTranslate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter text..."
+                                    android:textColorHint="#9E9E9E"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/white"
+                                    android:scrollbars="horizontal"
+                                    android:scrollHorizontally="true"
+                                    android:inputType="textMultiLine"
+                                    android:imeOptions="actionDone"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    />
+                        </ScrollView>
+                    </RelativeLayout>
+
+                    <!--  LANG 1 SIDEBAR  -->
+                    <RelativeLayout
+                            android:id="@+id/windowLang1Sidebar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/windowLang1MainContent"
+                            android:background="@color/blackDark_shadow"
+                            >
+
+                        <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                android:orientation="vertical"
+                                android:layout_centerInParent="true"
+                                >
+
+                            <ImageView
+                                    android:id="@+id/windowToTranslate"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/check_icon"
+                                    android:layout_centerInParent="true"
+                                    />
+
+                            <ImageView
+                                    android:id="@+id/clearInputButton"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/close_window"
+                                    android:tint="@color/white"
+                                    android:layout_weight="1"
+                                    />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--  LANG 2 HOLDER  -->
+                <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/blackDark_shadow"
+                        >
+
+                    <RelativeLayout
+                            android:id="@+id/windowLang2MainContent"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent">
+
+                        <RelativeLayout
+                                android:id="@+id/windowLang2Holder"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                >
+
+                            <Spinner
+                                    android:id="@+id/windowLang2Spinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/white"
+                                    android:layout_centerVertical="true"
+                                    android:background="@color/black_shadow"
+                                    />
+
+                        </RelativeLayout>
+
+                        <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/windowLang2Holder"
+                                android:scrollbars="vertical"
+                                android:fillViewport="true"
+                                >
+
+                            <TextView
+                                    android:id="@+id/translatedResult"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="5dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/white"
+                                    android:focusable="true"
+                                    android:textIsSelectable="true"
+                                    android:contextClickable="true"
+                                    />
+                        </ScrollView>
+                    </RelativeLayout>
+
+                    <!--  LANG 2 SIDEBAR  -->
+                    <RelativeLayout
+                            android:id="@+id/windowLang2Sidebar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toEndOf="@+id/windowLang2MainContent"
+                            android:background="@color/blackDark_shadow"
+                            >
+
+                        <ImageView
+                                android:id="@+id/copyButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/copy_icon"
+                                android:layout_centerInParent="true"
+                                />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

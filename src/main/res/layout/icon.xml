@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <RelativeLayout
+            android:id="@+id/iconView"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            >
+
+        <LinearLayout
+                android:id="@+id/iconSideControls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+
+            <ImageView
+                    android:id="@+id/closeIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/close_window"
+                    android:tint="@color/white"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    />
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/mainIcon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/icon_xml"
+                android:layout_toEndOf="@+id/iconSideControls"
+                />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/mainIcon"
+                android:weightSum="2"
+                >
+
+            <ImageView
+                    android:id="@+id/inflateWindow"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/inflate_window"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1"
+                    />
+
+            <ImageView
+                    android:id="@+id/setLayout"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/settings_window"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    />
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
